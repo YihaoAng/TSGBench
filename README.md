@@ -5,7 +5,7 @@
 <img src="https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png" alt="drawing" width="600"/>
 </p>
 
-
+# Table of Contents
 - [Introduction](#introduction)
 - [TSG Methods](#tsg-methods)
 - [Datasets](#datasets)
