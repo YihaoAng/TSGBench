@@ -54,7 +54,7 @@ TSGBench selects ten real-world datasets from various domains.
 
 
 
-| Dataset     | R     | n    | l    | Domain     | Reference                                                    |
+| Dataset     | $R$     | $n$    | $l$    | Domain     | Reference                                                    |
 | ----------- | ----- | ---- | ---- | ---------- | ------------------------------------------------------------ |
 | DLG         | 246   | 20   | 14   | Traffic    | http://archive.ics.uci.edu/dataset/157/dodgers+loop+sensor   |
 | Stock       | 3294  | 6    | 24   | Financial  | https://finance.yahoo.com/quote/GOOG/history?p=GOOG          |
