@@ -84,7 +84,7 @@ TSGBench selects ten real-world datasets from various domains.
 | Energy      | 17739 | 28   | 24   | Appliances | http://archive.ics.uci.edu/dataset/374/appliances+energy+prediction |
 | Energy Long | 17649 | 28   | 125  | Appliances | http://archive.ics.uci.edu/dataset/374/appliances+energy+prediction |
 | EEG         | 13366 | 14   | 128  | Medical    | https://archive.ics.uci.edu/dataset/264/eeg+eye+state        |
-| HAPT        | 1514  | 6    | 128  | Medical    |                                                              |
+| HAPT        | 1514  | 6    | 128  | Medical    | https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postura+transitions                                                            |
 | Air         | 7731  | 6    | 168  | Sensor     | https://www.microsoft.com/en-us/research/project/urban-air/  |
 | Boiler      | 80935 | 11   | 192  | Industrial | https://github.com/DMIRLAB-Group/SASA/tree/main/datasets/Boiler |
 
