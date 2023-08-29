@@ -100,32 +100,17 @@ TSGBench considers the following evaluation measures, ranking analysis, and a no
 ## Benchmarking Results
 
 
-
 ### Main Results
 
+![TSG Benchmarking Results](https://github.com/YihaoAng/TSGBench/blob/main/figures/benchmark_results.png)
 
+### Visualization
 
-
+![Visualization for TSG Benchmarking by t-SNE and Distribution Plot](https://github.com/YihaoAng/TSGBench/blob/main/figures/visualization_results.png)
 
 ### Generalization Test
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Generalization Test](https://github.com/YihaoAng/TSGBench/blob/main/figures/generalization_test_results.png)
 
 ## Get Started
 
