@@ -111,7 +111,7 @@ TSGBench considers the following evaluation measures, ranking analysis, and a no
 
 ![Generalization Test](https://github.com/YihaoAng/TSGBench/blob/main/figures/generalization_test_results.png)
 
-## Get Started
+## Get Started with TSGBench
 
 ![Overall Architecture of TSGBench](https://github.com/YihaoAng/TSGBench/blob/main/figures/overall_architecture.png)
 
