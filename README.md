@@ -18,8 +18,7 @@
    - [Configuration](#configuration)
    - [Run TSGBench](#run-tsgbench)
 
-<a href="#top">[top]</a>
-## Introduction <a href="#top">[top]</a>
+## Introduction
 
 TSGBench is an open-sourced benchmark for the Time Series Generation task.
 
