@@ -1,6 +1,8 @@
 # TSGBench: Time Series Generation Benchmark
 
-# table of contents
+[TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png)
+
+
 - [Introduction](#introduction)
 - [TSG Methods](#tsg-methods)
 - [Datasets](#datasets)
@@ -16,7 +18,12 @@
 
 ## Introduction
 
-![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png)
+TSGBench is an open-sourced benchmark for the Time Series Generation task.
+
+![Overall Architecture of TSGBench](https://github.com/YihaoAng/TSGBench/blob/main/figures/overall_architecture.png)
+
+
+
 
 ## TSG Methods
 
@@ -84,7 +91,6 @@ TSGBench selects ten real-world datasets from various domains.
 
 
 
-
 ## Evaluation Measures
 
 TSGBench considers the following evaluation measures, ranking analysis, and a novel generalization test by Domain Adaptation (DA).
@@ -126,9 +132,8 @@ TSGBench considers the following evaluation measures, ranking analysis, and a no
 
 ![Generalization Test](https://github.com/YihaoAng/TSGBench/blob/main/figures/generalization_test_results.png)
 
-## Get Started with TSGBench
 
-![Overall Architecture of TSGBench](https://github.com/YihaoAng/TSGBench/blob/main/figures/overall_architecture.png)
+## Get Started with TSGBench
 
 
 ### Configuration
