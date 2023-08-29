@@ -1,5 +1,20 @@
 # TSGBench: Time Series Generation Benchmark
 
+# table of contents
+- [Introduction](#introduction)
+- [TSG Methods](#tsg-methods)
+- [Datasets](#datasets)
+- [Evaluation Measures](#evaluation-measures)
+- [Benchmarking Results](#benchmarking-results)
+  - [Main Results](#main-results)
+  - [Visualization](#visualization)
+  - [Generalization Test](#generalization-test)
+- [Get Started with TSGBench](#get-started-with-tsgbench)
+   - [Configuration](#configuration)
+   - [Run TSGBench](#run-tsgbench)
+
+
+## Introduction
 
 ![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png)
 
