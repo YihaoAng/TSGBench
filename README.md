@@ -1,6 +1,7 @@
 # TSGBench: Time Series Generation Benchmark
 
-[TOC]
+[toc]
+
 
 ![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png)
 
