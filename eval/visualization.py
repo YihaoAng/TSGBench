@@ -153,7 +153,7 @@ visualization_tsne(method_name, dataset_name, dataset_state, ax = ax)
 ax.set_xlabel('')
 ax.set_ylabel('')
 for pos in ['top', 'bottom', 'left', 'right']:
-	ax.spines[pos].set_visible(False)
+    ax.spines[pos].set_visible(False)
 plt.savefig('./figures/' + method_name + '_' + dataset_name + '_tsne.png', dpi=400, bbox_inches='tight')
 
 
@@ -163,7 +163,7 @@ ax.set_xlabel('')
 ax.set_ylabel('')
 ax.set_xlim(0,1)
 for pos in ['top','right']:
-	ax.spines[pos].set_visible(False)
+    ax.spines[pos].set_visible(False)
 plt.savefig('./figures/' + method_name + '_' + dataset_name + '_distr.png', dpi=400, bbox_inches='tight')
 
 
