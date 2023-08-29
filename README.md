@@ -1,5 +1,6 @@
 # TSGBench: Time Series Generation Benchmark
 
+![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png)
 
 
 
@@ -128,6 +129,7 @@ TSGBench considers the following evaluation measures, ranking analysis, and a no
 
 ## Get Started
 
+![Overall Architecture of TSGBench](https://github.com/YihaoAng/TSGBench/blob/main/figures/overall_architecture.png)
 
 
 ### Configuration
