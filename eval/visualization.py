@@ -45,15 +45,13 @@ class MinMaxScaler():
         return data
 
 
-
 def visualization_tsne(method_name, dataset_name, dataset_state, ax):    
     with mgzip.open('./data/' + dataset_name + '_' + dataset_state + '.pkl', 'rb') as f:
         ori_data = pickle.load(f)
     ori_data = np.array(ori_data)
     with mgzip.open('./data/' + method_name + '/' + dataset_name + '_' + dataset_state + '_gen.pkl', 'rb') as f:
-            generated_data = pickle.load(f)
-
-        generated_data = np.array(generated_data)
+        generated_data = pickle.load(f)
+    generated_data = np.array(generated_data)
 
     # Analysis sample size (for faster computation)
     anal_sample_no = min([1000, len(ori_data)])
