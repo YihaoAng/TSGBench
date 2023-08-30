@@ -57,6 +57,7 @@ TSGBench surveys Time Series Generation (TSG) methods by different backbone mode
 | 2023 | TT-AAE       | GAN       | general TS                    | https://openreview.net/forum?id=fI3y_Dajlca                  |
 | 2021 | TimeVAE      | VAE       | general TS                    | https://github.com/abudesai/timeVAE                          |
 | 2023 | CRVAE        | VAE       | medical TS & causal discovery | https://github.com/sinhasam/CRVAE                            |
+| 2023 | TimeVQVAE      | VAE       | general TS                    | https://github.com/ML4ITS/TimeVQVAE                          |
 | 2020 | CTFP         | Flow      | general TS                    | https://github.com/BorealisAI/continuous-time-flow-process   |
 | 2021 | Fourier Flow | Flow      | general TS                    | https://github.com/ahmedmalaa/Fourier-flows                  |
 | 2018 | Neural ODE   | ODE + RNN | general TS                    | https://github.com/rtqichen/torchdiffeq                      |
@@ -177,7 +178,7 @@ Finally, users can run evaluations by
 python ds_ps.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0 --gpu_fraction 0.99
 
 # C-FID
-python c_fid.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0
+python c_fid/c_fid.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0
 
 # MDD, ACD, SD, KD, EU, DTW
 python feature_distance_eval.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0

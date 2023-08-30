@@ -3,15 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import acf
 from scipy.signal import argrelextrema
-import numpy as np
-
-import matplotlib.patches as mpatches 
 from tslearn.datasets import UCR_UEA_datasets
-
 import pickle
 import mgzip
-
-
 
 
 class MinMaxScaler():

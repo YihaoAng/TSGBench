@@ -3,15 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import acf
 from scipy.signal import argrelextrema
-import numpy as np
-
-import matplotlib.patches as mpatches 
 from tslearn.datasets import UCR_UEA_datasets
-
 import pickle
 import mgzip
-
-
 
 
 class MinMaxScaler():
@@ -75,8 +69,8 @@ def find_length(data):
 
 # ===============================
 ori_data = np.loadtxt('./data/energy_data.csv', delimiter = ",",skiprows = 1)
-ori_data.shape # time point * # sensor
-
+print(ori_data.shape)
+# ===============================
 with mgzip.open('./EEG.pkl', 'rb') as f:
     ori_data = pickle.load(f)
 ori_data.shape
@@ -84,7 +78,7 @@ ori_data.shape
 X_train, y_train, X_test, y_test = UCR_UEA_datasets().load_dataset("DodgerLoopGame")
 X_train = X_train.reshape(X_train.shape[1], X_train.shape[0])
 ori_data = X_train.copy()
-print(ori_data.shape) # # time point * # sensor
+print(ori_data.shape)
 for i in range(ori_data.shape[1]):
     ori_data[:,i] = pd.Series(ori_data[:,i]).interpolate().values
 # ===============================
@@ -135,9 +129,6 @@ scaled_train_data = scaler.fit_transform(train_data)
 
 scaled_valid_data = scaler.transform(valid_data)
 
-
-import pickle
-import mgzip
 
 
 dataset_name = 'eeg'
