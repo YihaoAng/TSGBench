@@ -174,6 +174,9 @@ Then, users can then generate time series and store the generated time series in
 Finally, users can run evaluations by
 
 ```bash
+
+cd eval
+
 # DS & PS
 python ds_ps.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0 --gpu_fraction 0.99
 
