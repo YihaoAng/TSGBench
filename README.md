@@ -65,7 +65,6 @@ TSGBench surveys Time Series Generation (TSG) methods by different backbone mode
 | 2021 | Neural SDE   | ODE + GAN | general TS                    | https://github.com/google-research/torchsde                  |
 | 2022 | GT-GAN       | ODE + GAN | general (w/ irregular) TS     | https://openreview.net/forum?id=ez6VHWvuXEx                  |
 | 2023 | LS4          | ODE + VAE | general (w/ forecasting) TS   | https://github.com/alexzhou907/ls4                           |
-| 2016 | WaveNet      | CNN       | speech                        |                                                              |
 | 2023 | SGM          | Diffusion | general TS                    | No code available                                            |
 
 
