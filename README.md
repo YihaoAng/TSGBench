@@ -178,14 +178,14 @@ Finally, users can run evaluations by
 cd eval
 
 # DS & PS
-python ds_ps.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0 --gpu_fraction 0.99
+python ds_ps.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE --gpu_id 0 --gpu_fraction 0.99
 
 # C-FID
-python c_fid/c_fid.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0
+python c_fid/c_fid.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE --gpu_id 0
 
 # MDD, ACD, SD, KD, EU, DTW
-python feature_distance_eval.py --method_name rgan --dataset_name stock --dataset_state train --gpu_id 0
+python feature_distance_eval.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE --gpu_id 0
 
 # t-SNE, Distribution Plot
-python visualization.py --method_name rgan --dataset_name stock --dataset_state train
+python visualization.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE
 ```
