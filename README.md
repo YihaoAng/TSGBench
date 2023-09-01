@@ -173,7 +173,6 @@ Then, users can then generate time series and store the generated time series in
 Finally, users can run evaluations by
 
 ```bash
-
 cd eval
 
 # DS & PS
