@@ -181,7 +181,7 @@ python ds_ps.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_
 # C-FID
 python c_fid/c_fid.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE --gpu_id 0
 
-# MDD, ACD, SD, KD, EU, DTW
+# MDD, ACD, SD, KD, ED, DTW
 python feature_distance_eval.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE --gpu_id 0
 
 # t-SNE, Distribution Plot
