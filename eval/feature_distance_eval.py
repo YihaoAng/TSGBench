@@ -10,9 +10,6 @@ import mgzip
 import pickle
 from dtaidistance.dtw_ndim import distance as multi_dtw_distance
 
-
-
-
 # ====================================
 # adapt from https://github.com/DeepIntoStreams/Evaluation-of-Time-Series-Generative-Models
 def acf_torch(x: torch.Tensor, max_lag: int, dim: Tuple[int] = (0, 1)) -> torch.Tensor:
@@ -308,14 +305,11 @@ for i in range(n_samples):
     for j in range(n_series):
         distance = np.linalg.norm(ori_sample[:, j] - generated_sample[:, j])
         total_distance_eu += distance
-    total_distance_eu = distance / n_series
+    total_distance_eu = total_distance_eu / n_series
     distance_eu.append(total_distance_eu)
     
 distance_eu = np.array(distance_eu)
 average_distance_eu = distance_eu.mean()
-
-
-
 
 distance_dtw = []
 for i in range(n_samples):
@@ -328,7 +322,6 @@ for i in range(n_samples):
     
 distance_dtw = np.array(distance_dtw)
 average_distance_dtw = distance_dtw.mean()
-
 
 
 
