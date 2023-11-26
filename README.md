@@ -3,14 +3,15 @@
 </div>
 
 
-
-
 <!-- ![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png) -->
+
 <p align="center">
 <img src="https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png" alt="drawing" width="600"/>
 </p>
 
+
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [TSG Methods](#tsg-methods)
 - [Datasets](#datasets)
@@ -20,12 +21,12 @@
   - [Visualization](#visualization)
   - [Generalization Test](#generalization-test)
 - [Get Started with TSGBench](#get-started-with-tsgbench)
-   - [Configuration](#configuration)
-   - [Run TSGBench](#run-tsgbench)
+  - [Configuration](#configuration)
+  - [Run TSGBench](#run-tsgbench)
 
 ## Introduction
 
-TSGBench is an open-sourced benchmark for the Time Series Generation task.
+TSGBench is the inaugural comprehensive benchmark designed for the Time Series Generation (TSG) task. 
 
 ![Overall Architecture of TSGBench](https://github.com/YihaoAng/TSGBench/blob/main/figures/overall_architecture.png)
 
@@ -34,7 +35,7 @@ TSGBench is an open-sourced benchmark for the Time Series Generation task.
 
 ## TSG Methods
 
-TSGBench surveys Time Series Generation (TSG) methods by different backbone models and their specialties.
+TSGBench surveys a diverse range of Time Series Generation (TSG) methods by different backbone models and their specialties. The table below provides an overview of these methods along with their references.
 
 
 
@@ -62,7 +63,7 @@ TSGBench surveys Time Series Generation (TSG) methods by different backbone mode
 | 2023 | TT-AAE       | GAN       | general TS                    | https://openreview.net/forum?id=fI3y_Dajlca                  |
 | 2021 | TimeVAE      | VAE       | general TS                    | https://github.com/abudesai/timeVAE                          |
 | 2023 | CRVAE        | VAE       | medical TS & causal discovery | https://github.com/sinhasam/CRVAE                            |
-| 2023 | TimeVQVAE      | VAE       | general TS                    | https://github.com/ML4ITS/TimeVQVAE                          |
+| 2023 | TimeVQVAE    | VAE       | general TS                    | https://github.com/ML4ITS/TimeVQVAE                          |
 | 2020 | CTFP         | Flow      | general TS                    | https://github.com/BorealisAI/continuous-time-flow-process   |
 | 2021 | Fourier Flow | Flow      | general TS                    | https://github.com/ahmedmalaa/Fourier-flows                  |
 | 2018 | Neural ODE   | ODE + RNN | general TS                    | https://github.com/rtqichen/torchdiffeq                      |
@@ -78,11 +79,9 @@ TSGBench surveys Time Series Generation (TSG) methods by different backbone mode
 
 ## Datasets
 
-TSGBench selects ten real-world datasets from various domains.
+TSGBench selects ten real-world datasets from various domains, ensuring a wide coverage of scenarios for TSG evaluation.
 
-
-
-| Dataset     | $R$     | $n$    | $l$    | Domain     | Reference                                                    |
+| Dataset     | $R$   | $n$  | $l$  | Domain     | Reference                                                    |
 | ----------- | ----- | ---- | ---- | ---------- | ------------------------------------------------------------ |
 | DLG         | 246   | 20   | 14   | Traffic    | http://archive.ics.uci.edu/dataset/157/dodgers+loop+sensor   |
 | Stock       | 3294  | 6    | 24   | Financial  | https://finance.yahoo.com/quote/GOOG/history?p=GOOG          |
@@ -91,7 +90,7 @@ TSGBench selects ten real-world datasets from various domains.
 | Energy      | 17739 | 28   | 24   | Appliances | http://archive.ics.uci.edu/dataset/374/appliances+energy+prediction |
 | Energy Long | 17649 | 28   | 125  | Appliances | http://archive.ics.uci.edu/dataset/374/appliances+energy+prediction |
 | EEG         | 13366 | 14   | 128  | Medical    | https://archive.ics.uci.edu/dataset/264/eeg+eye+state        |
-| HAPT        | 1514  | 6    | 128  | Medical    | https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postura+transitions                                                            |
+| HAPT        | 1514  | 6    | 128  | Medical    | https://archive.ics.uci.edu/dataset/341/smartphone+based+recognition+of+human+activities+and+postura+transitions |
 | Air         | 7731  | 6    | 168  | Sensor     | https://www.microsoft.com/en-us/research/project/urban-air/  |
 | Boiler      | 80935 | 11   | 192  | Industrial | https://github.com/DMIRLAB-Group/SASA/tree/main/datasets/Boiler |
 
@@ -140,7 +139,7 @@ TSGBench considers the following evaluation measures, ranking analysis, and a no
 ![Generalization Test](https://github.com/YihaoAng/TSGBench/blob/main/figures/generalization_test_results.png)
 
 
-## Get Started with TSGBench
+## Getting Started with TSGBench
 
 
 ### Configuration
@@ -159,9 +158,9 @@ conda install --file requirements.txt
 
 
 
-### Run TSGBench
+### Running TSGBench
 
-First, users can first modify the run data preprocessing by 
+First, users can first preprocess the data by 
 
 ```bash
 python preprocessing/data_preprocess.py
@@ -197,7 +196,7 @@ python visualization.py --method_name METHOD_NAME --dataset_name DATASET_NAME --
 
 # Reference
 
-We would appreciate using the following BibTeX to cite this work if you use TSGBench.
+Please consider citing our work if you use TSGBench in your research:
 
 ```bibtex
 @article{ang2023tsgbench,
