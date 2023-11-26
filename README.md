@@ -20,9 +20,9 @@
   - [Main Results](#main-results)
   - [Visualization](#visualization)
   - [Generalization Test](#generalization-test)
-- [Get Started with TSGBench](#get-started-with-tsgbench)
+- [Getting Started with TSGBench](#get-started-with-tsgbench)
   - [Configuration](#configuration)
-  - [Run TSGBench](#run-tsgbench)
+  - [Running TSGBench](#run-tsgbench)
 
 ## Introduction
 
