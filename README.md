@@ -187,3 +187,19 @@ python feature_distance_eval.py --method_name METHOD_NAME --dataset_name DATASET
 # t-SNE, Distribution Plot
 python visualization.py --method_name METHOD_NAME --dataset_name DATASET_NAME --dataset_state DATASET_STATE
 ```
+
+
+
+# Reference
+
+We would appreciate using the following BibTeX to cite this work if you use TSGBench.
+
+```tex
+@article{ang2023tsgbench,
+  title={TSGBench: Time Series Generation Benchmark},
+  author={Ang, Yihao and Huang, Qiang and Bao, Yifan and Tung, Anthony KH and Huang, Zhiyong},
+  journal      = {Proc. {VLDB} Endow.},
+  pages        = {305--318},
+  year={2023}
+}
+```
