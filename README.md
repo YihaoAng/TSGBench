@@ -203,6 +203,8 @@ Please consider citing our work if you use TSGBench in your research:
   title        = {TSGBench: Time Series Generation Benchmark},
   author       = {Ang, Yihao and Huang, Qiang and Bao, Yifan and Tung, Anthony KH and Huang, Zhiyong},
   journal      = {Proc. {VLDB} Endow.},
+  volume       = {17},
+  number       = {3},
   pages        = {305--318},
   year         = {2023}
 }
