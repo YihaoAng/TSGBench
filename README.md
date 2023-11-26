@@ -1,4 +1,9 @@
-# TSGBench: Time Series Generation Benchmark
+<div align= "center">
+  <h1> TSGBench: Time Series Generation Benchmark </h1>
+</div>
+
+
+
 
 <!-- ![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png) -->
 <p align="center">
