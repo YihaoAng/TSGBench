@@ -3,13 +3,11 @@
 </div>
 
 
-
 <!-- ![TSG Method Ranking across Ten evaluation Measures and Ten Datasets](https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png) -->
 
 <p align="center">
 <img src="https://github.com/YihaoAng/TSGBench/blob/main/figures/ranking.png" alt="drawing" width="600"/>
 </p>
-
 
 
 ## Table of Contents
