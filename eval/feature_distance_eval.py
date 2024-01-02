@@ -33,18 +33,19 @@ def non_stationary_acf_torch(X, symmetric=False):
     # Create a tensor to hold the correlations
     correlations = torch.zeros(T, T, D)
 
-    # Loop through each time step from lag to T-1
-    for t in range(T):
-        # Loop through each lag from 1 to lag
-        for tau in range(t, T):
-            # Compute the correlation between X_{t, d} and X_{t-tau, d}
-            correlation = torch.sum(X[:, t, :] * X[:, tau, :], dim=0) / (
-                torch.norm(X[:, t, :], dim=0) * torch.norm(X[:, tau, :], dim=0))
-            # print(correlation)
-            # Store the correlation in the output tensor
-            correlations[t, tau, :] = correlation
-            if symmetric:
-                correlations[tau, t, :] = correlation
+    for i in range(D):
+        # Compute the correlation between X_{t, d} and X_{t-tau, d}
+        if hasattr(torch,'corrcoef'):
+            correlations[:, :, i] = torch.corrcoef(X[:, :, i].t())
+        else: 
+            correlations[:, :, i] = torch.from_numpy(np.corrcoef(to_numpy(X[:, :, i]).T))
+
+    if not symmetric:
+        # Loop through each time step from lag to T-1
+        for t in range(T):
+            # Loop through each lag from 1 to lag
+            for tau in range(t+1, T):
+                correlations[tau, t, :] = 0
 
     return correlations
 
@@ -275,7 +276,7 @@ acd_all = []
 for i in range(0,5):
 
     mdd = (HistoLoss(x_real[:, 1:, :], n_bins=50, name='marginal_distribution')(x_fake[:, 1:, :])).detach().cpu().numpy()
-    acd = (ACFLoss(x_real, name='auto_correlation', stationary = False)(x_fake)).detach().cpu().numpy()
+    acd = (ACFLoss(x_real, name='auto_correlation', stationary = True)(x_fake)).detach().cpu().numpy()
     
     mdd_all.append(mdd)
     acd_all.append(acd)
@@ -324,10 +325,8 @@ distance_dtw = np.array(distance_dtw)
 average_distance_dtw = distance_dtw.mean()
 
 
-
 with open('../data/' + method_name + '/' + dataset_name + '_' + dataset_state + '_eval_feature.pkl', 'wb') as f:
     pickle.dump([mdd_all, acd_all, sd, kd], f)
-
 
 
 with open('../data/' + method_name + '/' + dataset_name + '_' + dataset_state + '_eval_distance.pkl', 'wb') as f:
