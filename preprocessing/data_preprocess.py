@@ -9,50 +9,36 @@ import mgzip
 
 
 class MinMaxScaler():
-    """Min Max normalizer.
-    Args:
-    - data: original data
-
-    Returns:
-    - norm_data: normalized data
-    """
     def fit_transform(self, data): 
         self.fit(data)
         scaled_data = self.transform(data)
         return scaled_data
-
 
     def fit(self, data):    
         self.mini = np.min(data, 0)
         self.range = np.max(data, 0) - self.mini
         return self
         
-
     def transform(self, data):
         numerator = data - self.mini
         scaled_data = numerator / (self.range + 1e-7)
         return scaled_data
 
-    
     def inverse_transform(self, data):
         data *= self.range
         data += self.mini
         return data
 
 
+# adapt from https://github.com/TheDatumOrg/VUS
 def find_length(data):
     if len(data.shape)>1:
         return 0
     data = data[:min(20000, len(data))]
-    
     base = 3
-    
     nobs = len(data)
     nlags = int(min(10 * np.log10(nobs), nobs - 1))
-
-    auto_corr = acf(data, nlags=nlags, fft=True)[base:] # 400
-    
-    
+    auto_corr = acf(data, nlags=nlags, fft=True)[base:]
     local_max = argrelextrema(auto_corr, np.greater)[0]
     try:
         max_local_max = np.argmax([auto_corr[lcm] for lcm in local_max])
@@ -61,21 +47,21 @@ def find_length(data):
             return 125
         return local_max[max_local_max]+base
     except:
-        # print('error')
         return 125
 
 
-
-
 # ===============================
-ori_data = np.loadtxt('./data/energy_data.csv', delimiter = ",",skiprows = 1)
+# load from csv file
+ori_data = np.loadtxt('./DATASET_NAME.csv', delimiter = ",",skiprows = 1)
 print(ori_data.shape)
 # ===============================
-with mgzip.open('./EEG.pkl', 'rb') as f:
+# load from pickle file
+with mgzip.open('./DATASET_NAME.pkl', 'rb') as f:
     ori_data = pickle.load(f)
 ori_data.shape
 # ===============================
-X_train, y_train, X_test, y_test = UCR_UEA_datasets().load_dataset("DodgerLoopGame")
+# load from existing datasets in UCR/UEA
+X_train, y_train, X_test, y_test = UCR_UEA_datasets().load_dataset("DATASET_NAME")
 X_train = X_train.reshape(X_train.shape[1], X_train.shape[0])
 ori_data = X_train.copy()
 print(ori_data.shape)
@@ -89,7 +75,6 @@ for i in range(ori_data.shape[1]):
 
 seq_len = int(np.mean(np.array(window_all)))
 print(seq_len)
-
 
 
 # Preprocess the dataset
@@ -126,12 +111,11 @@ print("train/valid shapes: ", train_data.shape, valid_data.shape)
 
 scaler = MinMaxScaler()        
 scaled_train_data = scaler.fit_transform(train_data)
-
 scaled_valid_data = scaler.transform(valid_data)
 
 
-
-dataset_name = 'eeg'
+# Store the preprocessed dataset
+dataset_name = 'DATASET_NAME'
 with mgzip.open('./data/' + dataset_name + '_train.pkl', 'wb') as f:
     pickle.dump(scaled_train_data, f)
 

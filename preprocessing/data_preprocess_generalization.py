@@ -9,39 +9,29 @@ import mgzip
 
 
 class MinMaxScaler():
-    """Min Max normalizer.
-    Args:
-    - data: original data
-
-    Returns:
-    - norm_data: normalized data
-    """
     def fit_transform(self, data): 
         self.fit(data)
         scaled_data = self.transform(data)
         return scaled_data
 
-
     def fit(self, data):    
         self.mini = np.min(data, 0)
         self.range = np.max(data, 0) - self.mini
         return self
-        
 
     def transform(self, data):
         numerator = data - self.mini
         scaled_data = numerator / (self.range + 1e-7)
         return scaled_data
 
-    
     def inverse_transform(self, data):
         data *= self.range
         data += self.mini
         return data
 
 
-
-
+# ===============================
+# Example from HAPT (Users 14 & 0)
 usr = 14
 dataset_name = 'hapt_' + str(usr)
 with mgzip.open('./data/' + dataset_name + '_train.pkl', 'rb') as f:
@@ -72,6 +62,3 @@ np.random.shuffle(ori_data)
 dataset_name = 'hapt_cross_' + str(usr1) + '_' + str(usr2)
 with mgzip.open('./data/' + dataset_name + '_train.pkl', 'wb') as f:
     pickle.dump(ori_data, f)
-
-
-
