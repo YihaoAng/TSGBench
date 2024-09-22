@@ -11,21 +11,6 @@ class BaseModel(nn.Module):
     def sample_data():
         pass
 
-    def get_z(self,data):
-        pass
-
-    def get_mean_logvar(self,data):
-        pass
-
-    def get_recon_from_data(self,data):
-        pass
-
-    def get_recon_from_z(self,z):
-        pass
-
-    def get_latent_from_mean_logvar(self,mean,logvar):
-        pass
-
     def assemble_batch(self, data, augment_shape=2):
         if isinstance(data, np.ndarray):
             data = torch.FloatTensor(data)
