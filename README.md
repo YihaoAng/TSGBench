@@ -23,7 +23,7 @@
 ## Table of Contents
 
 - [Overview of TSGBench](#overview-of-tsgbench)
-    - [Time Series Generation (TSG)](#time-series-generation-(tsg))
+    - [Time Series Generation (TSG)](#time-series-generation-tsg)
     - [TSG Methods](#tsg-methods)
     - [TSG Datasets](#tsg-datasets)
     - [TSG Evaluation Measures](#tsg-evaluation-measures)
