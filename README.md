@@ -10,7 +10,7 @@
 **[TSGAssist](https://www.vldb.org/pvldb/vol17/p4309-huang.pdf)** is an interactive assistant that integrates the strengths of TSGBench and utilizes Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) for TSG recommendations and benchmarking &#x1F916;&#x1F4CA;
 
 
-**We are actively exploring industrial collaborations in time series analytics. Please feel free to reach out if interested** &#x1F91D;&#x2728;
+**We are actively exploring industrial collaborations in time series analytics. Please feel free to reach out (yihao_ang AT comp.nus.edu.sg) if interested** &#x1F91D;&#x2728;
 
 
 
