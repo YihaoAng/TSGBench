@@ -1,0 +1,32 @@
+preprocessing:
+  do_preprocessing: True
+  original_data_path: YOUR_DATA_PATH_HERE
+  output_ori_path: ./data/ori/
+  dataset_name: stock
+  use_ucr_uea_dataset: False # Set it True if you need ucr/uea dataset
+  ucr_uea_dataset_name: stock # Specify the dataset name if you need ucr/uea dataset
+  seq_length: 125 # If invalid or set as None, then auto correlation will be used to automatically determine the sequence length
+  valid_ratio: 0.1
+  do_normalization: True
+
+generation:
+  do_generation: True
+  model: TimeVAE
+  dataset_name: stock
+  output_gen_path: ./data/gen/
+  pretrain_path : ./pretrain_model/
+  no_cuda: True # Set it True if you don't need cuda in generation stage
+  cuda_device: 0 # Specify the index if you use cuda and have multiple cuda devices
+  latent_dim: 64
+  hidden_layer: [32, 64, 128]
+  
+evaluation:
+  do_evaluation: True
+  result_path: ./result/
+  no_cuda: True # Set it True if you don't need cuda in eval stage
+  cuda_device: 0 # Specify the index if you use cuda and have multiple cuda devices
+  method_list: [DS,PS]
+  #[C-FID,MDD,ACD,SD,KD,ED,DTW,t-SNE,Distribution]
+  iter_disc: 2000
+  iter_pred: 5000
+  rnn_name: 'lstm'
