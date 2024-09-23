@@ -226,8 +226,7 @@ Please consider citing our work if you use TSGBench (and/or TSGAssist) in your r
 
 # TSGAssist
 @article{ang2024tsgassist,
-  title        = {TSGAssist: An Interactive Assistant Harnessing LLMs and RAG for Time Series Generation Recommendations and Benchmarking
-},
+  title        = {TSGAssist: An Interactive Assistant Harnessing LLMs and RAG for Time Series Generation Recommendations and Benchmarking},
   author       = {Ang, Yihao and Bao, Yifan and Huang, Qiang and Tung, Anthony KH and Huang, Zhiyong},
   journal      = {Proc. {VLDB} Endow.},
   volume       = {17},
