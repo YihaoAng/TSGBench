@@ -36,7 +36,7 @@ def generate_data(cfg,data):
     output_path = os.path.join(output_gen_path,model_name,f'{dataset_name}_gen.pkl')
     make_sure_path_exist(output_path)
     with mgzip.open(os.path.join(output_path), 'wb') as f:
-        pickle.dump(train_data, f)
+        pickle.dump(generated_data, f)
     show_with_end_divider(f'Generation done. Generated files saved to {output_path}.')
     return generated_data
 
